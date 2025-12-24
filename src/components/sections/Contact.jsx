@@ -250,7 +250,7 @@ export default function Contact() {
               </div>
               <div>
                 <span className="font-bold text-xl text-gray-900 dark:text-white">@SAMTECH-la</span>
-                <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">9 Repositories</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">18 Repositories</p>
               </div>
             </motion.a>
           </motion.div>
