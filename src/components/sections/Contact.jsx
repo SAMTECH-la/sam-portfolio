@@ -53,7 +53,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-20 bg-slate-50 dark:bg-slate-950">
+    <section id="contact" className="py-12 sm:py-16 md:py-20 bg-white dark:bg-slate-900/50 transition-colors duration-300">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div 
@@ -63,7 +63,7 @@ export default function Contact() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl md:text-5xl font-black bg-gradient-to-r from-gray-900 to-purple-600 bg-clip-text text-transparent dark:from-white dark:to-indigo-400 mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black bg-gradient-to-r from-gray-900 to-purple-600 bg-clip-text text-transparent dark:from-white dark:to-indigo-400 mb-4">
             Get In Touch
           </h2>
           <p className="text-xl text-gray-700 dark:text-gray-300 max-w-2xl mx-auto leading-relaxed">
@@ -71,7 +71,7 @@ export default function Contact() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <div className="grid grid-cols-1 gap-8 sm:gap-10 lg:grid-cols-2 lg:gap-12 items-start">
           {/* FORM */}
           <motion.form 
             ref={formRef}

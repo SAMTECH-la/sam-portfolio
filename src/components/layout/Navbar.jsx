@@ -9,6 +9,7 @@ export default function Navbar({ theme, toggleTheme }) {
     { href: '#skills', label: 'Skills' },
     { href: '#projects', label: 'Projects' },
     { href: '#experience', label: 'Experience' },
+    { href: '#certifications', label: 'Certifications' },
     { href: '#contact', label: 'Contact' },
   ];
 
@@ -27,7 +28,7 @@ export default function Navbar({ theme, toggleTheme }) {
         {/* Logo / Name */}
         <motion.a
           href="#home"
-          className="text-2xl font-black bg-gradient-to-r from-slate-900 via-purple-600 to-pink-600 bg-clip-text text-transparent dark:from-slate-100 dark:via-indigo-400 dark:to-purple-400"
+          className="text-lg sm:text-xl md:text-2xl font-black bg-gradient-to-r from-slate-900 via-purple-600 to-pink-600 bg-clip-text text-transparent dark:from-slate-100 dark:via-indigo-400 dark:to-purple-400"
           whileHover={{ scale: 1.05 }}
         >
           &lt;Sam /&gt;

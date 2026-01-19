@@ -1,6 +1,6 @@
+import { AnimatePresence, motion } from 'framer-motion';
 import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { skills, skillsByCategory } from '../../data/skills';
+import { skillsByCategory } from '../../data/skills';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -19,7 +19,7 @@ export default function Skills() {
   const categories = Object.keys(skillsByCategory);
 
   return (
-    <section id="skills" className="py-16 border-t border-slate-200/50 bg-gradient-to-b from-white to-slate-50/50 dark:border-slate-800/50 dark:from-slate-900 dark:to-slate-950/50">
+    <section id="skills" className="py-16 border-t border-slate-200/50 bg-white dark:border-slate-800 dark:bg-slate-900/50 transition-colors duration-300">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div 
@@ -60,7 +60,7 @@ export default function Skills() {
         <AnimatePresence mode="wait">
           <motion.div
             key={activeCategory}
-            className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5"
+            className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:gap-4"
             variants={containerVariants}
             initial={{ opacity: 0, scale: 0.95 }}
             animate="visible"

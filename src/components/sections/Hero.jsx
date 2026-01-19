@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import profileImage from '../../assets/profileee.png';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -24,7 +25,7 @@ export default function Hero() {
   return (
     <motion.section
       id="home"
-      className="grid min-h-[80vh] grid-cols-1 items-center gap-12 py-20 md:grid-cols-2 md:py-32 lg:py-40"
+      className="grid min-h-screen grid-cols-1 items-center gap-8 py-12 sm:gap-10 sm:py-16 md:grid-cols-2 md:gap-12 md:py-32 lg:py-40"
       variants={containerVariants}
       initial="hidden"
       whileInView="visible"
@@ -43,13 +44,13 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, ease: "easeOut" }}
-            className="bg-gradient-to-r from-slate-900 via-purple-600 to-pink-600 bg-clip-text text-5xl font-black tracking-tight text-transparent sm:text-6xl md:text-7xl lg:text-8xl dark:from-slate-100 dark:via-indigo-400 dark:to-purple-400"
+            className="bg-gradient-to-r from-slate-900 via-purple-600 to-pink-600 bg-clip-text text-3xl font-black tracking-tight text-transparent sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl dark:from-slate-100 dark:via-indigo-400 dark:to-purple-400"
           >
             Hi, I'm <span>Sam</span>
           </motion.h1>
           <motion.p 
             variants={itemVariants}
-            className="max-w-lg text-xl text-slate-600 dark:text-slate-300"
+            className="max-w-lg text-base sm:text-lg md:text-xl text-slate-600 dark:text-slate-300"
           >
             I craft <span className="font-black text-slate-900 dark:text-slate-100">beautiful</span> and{' '}
             <span className="font-black text-slate-900 dark:text-slate-100">performant</span> web experiences.
@@ -64,7 +65,7 @@ export default function Hero() {
             href="#projects"
             whileHover={{ scale: 1.05, y: -4 }}
             whileTap={{ scale: 0.98 }}
-            className="group relative rounded-3xl bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 px-10 py-5 font-black text-xl text-slate-900 shadow-2xl shadow-purple-500/50 hover:shadow-purple-500/75 hover:from-purple-600 hover:via-pink-600 hover:to-orange-600 transition-all duration-500 overflow-hidden"
+            className="group relative rounded-3xl bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 font-black text-sm sm:text-base md:text-xl text-slate-900 shadow-2xl shadow-purple-500/50 hover:shadow-purple-500/75 hover:from-purple-600 hover:via-pink-600 hover:to-orange-600 transition-all duration-500 overflow-hidden"
           >
             <span className="relative z-10">View My Work</span>
             <motion.div 
@@ -79,7 +80,7 @@ export default function Hero() {
             href="#contact"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.98 }}
-            className="rounded-3xl border-2 border-slate-200/50 px-10 py-5 font-bold text-xl text-slate-900 backdrop-blur-xl hover:border-purple-500 hover:text-purple-500 hover:shadow-2xl hover:shadow-purple-500/25 dark:border-slate-700/50 dark:text-slate-100 dark:hover:border-purple-400 dark:hover:text-purple-400 transition-all duration-300"
+            className="rounded-3xl border-2 border-slate-200/50 px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 font-bold text-sm sm:text-base md:text-xl text-slate-900 backdrop-blur-xl hover:border-purple-500 hover:text-purple-500 hover:shadow-2xl hover:shadow-purple-500/25 dark:border-slate-700/50 dark:text-slate-100 dark:hover:border-purple-400 dark:hover:text-purple-400 transition-all duration-300"
           >
             Get In Touch
           </motion.a>
@@ -95,19 +96,20 @@ export default function Hero() {
       >
         <motion.div 
           animate={{ 
-            rotate: [0, 10, -10, 5, 0],
-            scale: [1, 1.02, 1.01, 1]
+            y: [0, -20, 0]
           }}
           transition={{ 
-            duration: 8, 
+            duration: 4, 
             repeat: Infinity, 
             ease: "easeInOut" 
           }}
-          className="h-96 w-96 rounded-3xl bg-gradient-to-br from-purple-400/30 via-pink-400/30 to-orange-400/30 p-2 shadow-2xl backdrop-blur-3xl border border-white/20"
+          className="h-64 w-64 sm:h-80 sm:w-80 md:h-96 md:w-96 rounded-full bg-gradient-to-br from-purple-400/30 via-pink-400/30 to-orange-400/30 p-2 shadow-2xl backdrop-blur-3xl border border-white/20"
         >
-          <div className="flex h-full w-full items-center justify-center rounded-2xl bg-gradient-to-br from-slate-50/90 to-white p-12 text-7xl font-black text-slate-900 shadow-2xl backdrop-blur-xl dark:from-slate-900/90 dark:to-slate-800 dark:text-slate-100">
-            S
-          </div>
+          <img 
+            src={profileImage}
+            alt="Profile"
+            className="h-full w-full rounded-full object-cover shadow-2xl"
+          />
         </motion.div>
       </motion.div>
     </motion.section>

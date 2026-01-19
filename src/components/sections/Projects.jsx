@@ -17,7 +17,7 @@ const cardVariants = {
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-20 border-t border-slate-200/50 bg-gradient-to-b from-slate-50/50 to-white dark:border-slate-800/50 dark:from-slate-950/50 dark:to-slate-900">
+    <section id="projects" className="py-20 border-t border-slate-200/50 bg-white dark:border-slate-800 dark:bg-slate-900/50 transition-colors duration-300">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div 
@@ -26,7 +26,7 @@ export default function Projects() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl font-black bg-gradient-to-r from-slate-900 via-purple-600 to-pink-600 bg-clip-text text-transparent tracking-tight dark:from-slate-100 dark:via-indigo-400 dark:to-purple-400">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black bg-gradient-to-r from-slate-900 via-purple-600 to-pink-600 bg-clip-text text-transparent tracking-tight dark:from-slate-100 dark:via-indigo-400 dark:to-purple-400">
             Featured Projects
           </h2>
           <p className="mt-4 text-xl text-slate-600 dark:text-slate-300">
@@ -52,7 +52,7 @@ export default function Projects() {
                 rotateX: 2
               }}
               transition={{ duration: 0.3 }}
-              className="group relative rounded-3xl overflow-hidden bg-white border border-slate-200 shadow-xl hover:shadow-2xl hover:shadow-purple-500/20 hover:border-purple-400/50 dark:bg-slate-900 dark:border-slate-700 dark:hover:border-purple-400/50 transition-all duration-500 backdrop-blur-xl"
+              className="group relative rounded-3xl overflow-hidden bg-white border border-slate-200 shadow-xl hover:shadow-2xl hover:shadow-purple-500/20 hover:border-purple-400/50 dark:bg-slate-800 dark:border-slate-700 dark:hover:shadow-purple-500/30 dark:hover:border-purple-500/50 transition-all duration-500 backdrop-blur-xl"
             >
               {/* Gradient overlay on hover */}
               <motion.div
@@ -60,17 +60,17 @@ export default function Projects() {
               />
               
               {/* Content */}
-              <div className="relative z-10 p-8 h-full flex flex-col">
+              <div className="relative z-10 p-4 sm:p-6 md:p-8 h-full flex flex-col">
                 {/* Project Title */}
                 <motion.h3 
-                  className="text-2xl font-black text-slate-900 mb-4 group-hover:text-purple-500 dark:text-slate-100 dark:group-hover:text-purple-400 leading-tight"
+                  className="text-lg sm:text-xl md:text-2xl font-black text-slate-900 mb-4 group-hover:text-purple-500 dark:text-slate-100 dark:group-hover:text-purple-400 leading-tight"
                   whileHover={{ scale: 1.02 }}
                 >
                   {project.title}
                 </motion.h3>
 
                 {/* Description */}
-                <p className="text-slate-600 mb-6 flex-1 dark:text-slate-300 leading-relaxed">
+                <p className="text-sm sm:text-base md:text-base text-slate-600 mb-6 flex-1 dark:text-slate-300 leading-relaxed">
                   {project.description}
                 </p>
 
